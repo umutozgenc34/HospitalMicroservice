@@ -3,9 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{703A1607-ED1B-4707-A706-E220E87609F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{7682D9DB-D15F-4752-BD77-33B5A750BAC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "patient", "patient", "{4942DB26-88E9-49D1-B87B-A39681C884E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalMicroservice.Patient.Api", "HospitalMicroservice.Patient.Api\HospitalMicroservice.Patient.Api.csproj", "{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ADF47DAF-D13A-43B7-A323-FDEC497C2AFB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF47DAF-D13A-43B7-A323-FDEC497C2AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF47DAF-D13A-43B7-A323-FDEC497C2AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF47DAF-D13A-43B7-A323-FDEC497C2AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF47DAF-D13A-43B7-A323-FDEC497C2AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7682D9DB-D15F-4752-BD77-33B5A750BAC9} = {703A1607-ED1B-4707-A706-E220E87609F9}
+		{4942DB26-88E9-49D1-B87B-A39681C884E2} = {7682D9DB-D15F-4752-BD77-33B5A750BAC9}
+		{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E} = {4942DB26-88E9-49D1-B87B-A39681C884E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36E89379-84C0-45EC-A2CD-BD4F410381F6}
