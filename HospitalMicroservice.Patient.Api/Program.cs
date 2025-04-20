@@ -1,6 +1,8 @@
+using HospitalMicroservice.Patient.Api.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddDatabaseServiceExtension();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
