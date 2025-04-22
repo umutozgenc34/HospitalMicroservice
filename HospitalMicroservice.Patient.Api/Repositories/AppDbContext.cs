@@ -1,5 +1,4 @@
-﻿using HospitalMicroservice.Patient.Api.Features.Patients;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 using System.Reflection;
 
