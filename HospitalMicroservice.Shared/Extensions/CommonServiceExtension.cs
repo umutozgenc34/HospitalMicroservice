@@ -8,6 +8,7 @@ public static class CommonServiceExtension
     {
         services.AddHttpContextAccessor();
         services.AddMediatR(x => x.RegisterServicesFromAssemblyContaining(assembly));
+        services.AddAutoMapper(assembly);
 
         return services;
     }
