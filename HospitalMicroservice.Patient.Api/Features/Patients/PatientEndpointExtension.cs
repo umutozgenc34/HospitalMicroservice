@@ -2,6 +2,7 @@
 using HospitalMicroservice.Patient.Api.Features.Patients.Delete;
 using HospitalMicroservice.Patient.Api.Features.Patients.GetAll;
 using HospitalMicroservice.Patient.Api.Features.Patients.GetById;
+using HospitalMicroservice.Patient.Api.Features.Patients.Update;
 
 namespace HospitalMicroservice.Patient.Api.Features.Patients;
 
@@ -13,7 +14,8 @@ public static class PatientEndpointExtension
             .CreatePatientGroupItemEndpoint()
             .GetAllPatientsGroupItemEndpoint()
             .DeletePatientGroupItemEndpoint()
-            .GetByIdPatientGroupItemEndpoint();
+            .GetByIdPatientGroupItemEndpoint()
+            .UpdatePatientGroupItemEndpoint();
 
     }
 }
