@@ -1,0 +1,6 @@
+@HospitalMicroservice.Doctor.Api_HostAddress = http://localhost:5133
+
+GET {{HospitalMicroservice.Doctor.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

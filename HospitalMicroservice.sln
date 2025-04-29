@@ -15,7 +15,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{221CA93F-8772-449D-94A8-574D4B848BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalMicroservice.Shared", "HospitalMicroservice.Shared\HospitalMicroservice.Shared.csproj", "{82E3AF65-97AD-4123-AC32-59E804764656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalMicroservice.Shared", "HospitalMicroservice.Shared\HospitalMicroservice.Shared.csproj", "{82E3AF65-97AD-4123-AC32-59E804764656}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doctor", "doctor", "{34E59E59-5EFC-4F6D-B02C-B52806510EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalMicroservice.Doctor.Api", "HospitalMicroservice.Doctor.Api\HospitalMicroservice.Doctor.Api.csproj", "{998D79F8-7085-48D1-BFD3-B23855AC40DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{82E3AF65-97AD-4123-AC32-59E804764656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82E3AF65-97AD-4123-AC32-59E804764656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82E3AF65-97AD-4123-AC32-59E804764656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998D79F8-7085-48D1-BFD3-B23855AC40DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998D79F8-7085-48D1-BFD3-B23855AC40DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998D79F8-7085-48D1-BFD3-B23855AC40DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998D79F8-7085-48D1-BFD3-B23855AC40DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +53,8 @@ Global
 		{5635024C-84BA-46D0-AD3A-CD4C9A7BEF2E} = {4942DB26-88E9-49D1-B87B-A39681C884E2}
 		{221CA93F-8772-449D-94A8-574D4B848BED} = {703A1607-ED1B-4707-A706-E220E87609F9}
 		{82E3AF65-97AD-4123-AC32-59E804764656} = {221CA93F-8772-449D-94A8-574D4B848BED}
+		{34E59E59-5EFC-4F6D-B02C-B52806510EB9} = {7682D9DB-D15F-4752-BD77-33B5A750BAC9}
+		{998D79F8-7085-48D1-BFD3-B23855AC40DD} = {34E59E59-5EFC-4F6D-B02C-B52806510EB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36E89379-84C0-45EC-A2CD-BD4F410381F6}
