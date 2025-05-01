@@ -44,7 +44,7 @@ public class CreatePatientCommandHandler(AppDbContext context) : IRequestHandler
 
 
         return ServiceResult<CreatePatientResponse>.SuccessAsCreated(new CreatePatientResponse(patient.Id),
-             $"/api/courses/{patient.Id}");
+             $"/api/patients/{patient.Id}");
     }
 }
 
