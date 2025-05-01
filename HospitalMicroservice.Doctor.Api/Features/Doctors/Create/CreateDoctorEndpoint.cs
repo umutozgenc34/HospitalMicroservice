@@ -1,4 +1,5 @@
 ﻿using HospitalMicroservice.Shared.Extensions;
+using HospitalMicroservice.Shared.Filters;
 using MediatR;
 
 namespace HospitalMicroservice.Doctor.Api.Features.Doctors.Create;
@@ -10,7 +11,8 @@ public static class CreateDoctorEndpoint
         group.MapPost("/",
             async (CreateDoctorCommand request, IMediator mediator) =>
                             (await mediator.Send(request)).ToGenericResult())
-                             .WithName("CreateDoctor");
+                             .WithName("CreateDoctor")
+                             .AddEndpointFilter<ValidationFilter<CreateDoctorCommand>>();
 
         return group;
     }
