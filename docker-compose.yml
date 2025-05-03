@@ -38,6 +38,28 @@ services:
     environment:
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongo.db.doctor:27017/
       ME_CONFIG_BASICAUTH: false 
+
+  mongo.db.appointment:
+    restart: always
+    image: mongo:8.0-rc
+    container_name: mongo.db.appointment.container
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    ports:
+      - "27050:27017"
+    volumes:
+      - mongo.db.appointment.volume:/data/db
+
+  mongo.db.appointment.ui:
+    image: mongo-express:1.0.2-20-alpine3.19
+    container_name: mongo.db.appointment.ui
+    ports:
+      - "27052:8081"
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongo.db.appointment:27017/
+      ME_CONFIG_BASICAUTH: false 
 volumes:
   mongo.db.patient.volume:
-  mongo.db.doctor.volume:  
+  mongo.db.doctor.volume:
+  mongo.db.appointment.volume:

@@ -1,0 +1,6 @@
+@HospitalMicroservice.Appointment.Api_HostAddress = http://localhost:5119
+
+GET {{HospitalMicroservice.Appointment.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
