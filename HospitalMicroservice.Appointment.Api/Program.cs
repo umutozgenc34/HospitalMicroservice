@@ -1,4 +1,5 @@
 using HospitalMicroservice.Appointment.Api;
+using HospitalMicroservice.Appointment.Api.Features;
 using HospitalMicroservice.Doctor.Api.Repositories;
 using HospitalMicroservice.Patient.Api.Options;
 using HospitalMicroservice.Shared.Extensions;
@@ -12,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.AddAppointmentGroupEndpointExtensions();
 
 if (app.Environment.IsDevelopment())
 {
