@@ -6,6 +6,7 @@ namespace HospitalMicroservice.Doctor.Api.Repositories;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
+    public DbSet<Appointment.Api.Features.Appointments.Appointment> Appointments { get; set; }
     public static AppDbContext Create(IMongoDatabase database)
     {
         var optionsBuilder =

@@ -16,8 +16,4 @@
     <ProjectReference Include="..\HospitalMicroservice.Shared\HospitalMicroservice.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\" />
-  </ItemGroup>
-
 </Project>
