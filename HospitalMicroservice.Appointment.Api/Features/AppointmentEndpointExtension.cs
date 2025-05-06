@@ -1,4 +1,5 @@
 ﻿using HospitalMicroservice.Appointment.Api.Features.Appointments.Create;
+using HospitalMicroservice.Appointment.Api.Features.Appointments.Delete;
 using HospitalMicroservice.Appointment.Api.Features.Appointments.GetAll;
 
 namespace HospitalMicroservice.Appointment.Api.Features;
@@ -9,7 +10,8 @@ public static class AppointmentEndpointExtension
     {
         app.MapGroup("api/appointments").WithTags("Appointments")
             .CreateAppointmentGroupItemEndpoint()
-            .GetAllAppointmentsGroupItemEndpoint();
+            .GetAllAppointmentsGroupItemEndpoint()
+            .DeleteAppointmentGroupItemEndpoint();
 
     }
 }
