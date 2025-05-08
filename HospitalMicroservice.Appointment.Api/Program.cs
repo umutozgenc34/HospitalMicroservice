@@ -9,12 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDatabaseServiceExtension();
 builder.Services.AddCommonServiceExtension(typeof(AppointmentAssembly));
 builder.Services.AddOptionExtension();
+builder.Services.AddVersioningExtension();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.AddAppointmentGroupEndpointExtensions();
+app.AddAppointmentGroupEndpointExtensions(app.AddVersionSetExtension());
 
 if (app.Environment.IsDevelopment())
 {

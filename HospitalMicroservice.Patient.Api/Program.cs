@@ -10,11 +10,12 @@ builder.Services.AddDatabaseServiceExtension();
 builder.Services.AddCommonServiceExtension(typeof(PatientAssembly));
 builder.Services.AddOptionExtension();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddVersioningExtension();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.AddPatientGroupEndpointExtension();
+app.AddPatientGroupEndpointExtension(app.AddVersionSetExtension());
 
 if (app.Environment.IsDevelopment())
 {

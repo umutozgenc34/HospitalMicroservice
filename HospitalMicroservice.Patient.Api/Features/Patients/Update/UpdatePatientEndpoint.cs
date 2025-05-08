@@ -11,6 +11,7 @@ public static class UpdatePatientEndpoint
         group.MapPut("/", async (UpdatePatientCommand command, IMediator mediator) =>
         (await mediator.Send(command)).ToGenericResult())
         .WithName("UpdatePatient")
+        .MapToApiVersion(1, 0)
         .AddEndpointFilter<ValidationFilter<UpdatePatientCommand>>();
 
         return group;

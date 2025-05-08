@@ -10,7 +10,8 @@ public static class GetAllAppointmentsEndpoint
         group.MapGet("/",
             async (IMediator mediator) =>
                 (await mediator.Send(new GetAllAppointmentsQuery())).ToGenericResult())
-            .WithName("GetAllAppointments");
+            .WithName("GetAllAppointments")
+            .MapToApiVersion(1, 0);
 
         return group;
     }

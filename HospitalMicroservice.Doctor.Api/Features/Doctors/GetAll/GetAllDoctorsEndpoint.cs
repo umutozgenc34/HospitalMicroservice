@@ -8,7 +8,8 @@ public static class GetAllDoctorsEndpoint
     public static RouteGroupBuilder GetAllDoctorsGroupItemEndpoint(this RouteGroupBuilder group)
     {
         group.MapGet("/", async (IMediator mediator) => (await mediator.Send(new GetAllDoctorsQuery())).ToGenericResult())
-            .WithName("GetAllDoctors");
+            .WithName("GetAllDoctors")
+            .MapToApiVersion(1, 0);
 
         return group;
     }

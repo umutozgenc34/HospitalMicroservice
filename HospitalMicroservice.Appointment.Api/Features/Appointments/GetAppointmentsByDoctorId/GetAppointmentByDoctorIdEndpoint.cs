@@ -10,7 +10,8 @@ public static class GetAppointmentsByDoctorIdEndpoint
         group.MapGet("/by-doctor/{doctorId:guid}",
             async (Guid doctorId, IMediator mediator) =>
                 (await mediator.Send(new GetAppointmentsByDoctorIdQuery(doctorId))).ToGenericResult())
-            .WithName("GetAppointmentsByDoctorId");
+            .WithName("GetAppointmentsByDoctorId")
+            .MapToApiVersion(1, 0);
 
         return group;
     }

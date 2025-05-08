@@ -9,7 +9,8 @@ public static class DeletePatientEndpoint
     {
         group.MapDelete("/{id:guid}", async (Guid id, IMediator mediator) =>
             (await mediator.Send(new DeletePatientCommand(id))).ToGenericResult())
-            .WithName("DeletePatient");
+            .WithName("DeletePatient")
+            .MapToApiVersion(1, 0);
         return group;
     }
 }

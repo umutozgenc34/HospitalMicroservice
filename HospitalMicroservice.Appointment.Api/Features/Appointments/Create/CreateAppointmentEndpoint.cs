@@ -12,6 +12,7 @@ public static class CreateAppointmentEndpoint
             async (CreateAppointmentCommand request, IMediator mediator) =>
                 (await mediator.Send(request)).ToGenericResult())
             .WithName("CreateAppointment")
+            .MapToApiVersion(1,0)
             .AddEndpointFilter<ValidationFilter<CreateAppointmentCommand>>();
 
         return group;

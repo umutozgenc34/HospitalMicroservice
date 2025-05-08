@@ -8,7 +8,8 @@ public static class GetDoctorByIdEndpoint
     public static RouteGroupBuilder GetByIdDoctorGroupItemEndpoint(this RouteGroupBuilder group)
     {
         group.MapGet("/{id:guid}", async (Guid id, IMediator mediator) => (await mediator.Send(new GetDoctorByIdQuery(id))).ToGenericResult())
-            .WithName("GetByIdDoctor");
+            .WithName("GetByIdDoctor")
+            .MapToApiVersion(1, 0);
 
         return group;
     }

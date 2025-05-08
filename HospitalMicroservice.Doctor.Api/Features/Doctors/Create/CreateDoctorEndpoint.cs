@@ -12,6 +12,7 @@ public static class CreateDoctorEndpoint
             async (CreateDoctorCommand request, IMediator mediator) =>
                             (await mediator.Send(request)).ToGenericResult())
                              .WithName("CreateDoctor")
+                             .MapToApiVersion(1, 0)
                              .AddEndpointFilter<ValidationFilter<CreateDoctorCommand>>();
 
         return group;

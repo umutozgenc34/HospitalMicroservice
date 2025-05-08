@@ -10,7 +10,8 @@ public static class DeleteAppointmentEndpoint
         group.MapDelete("/{id:guid}",
             async (Guid id, IMediator mediator) =>
                 (await mediator.Send(new DeleteAppointmentCommand(id))).ToGenericResult())
-            .WithName("DeleteAppointment");
+            .WithName("DeleteAppointment")
+            .MapToApiVersion(1, 0);
 
         return group;
     }

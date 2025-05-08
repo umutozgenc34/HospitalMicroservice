@@ -7,13 +7,14 @@ using HospitalMicroservice.Shared.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDatabaseServiceExtension();
 builder.Services.AddCommonServiceExtension(typeof(DoctorAssembly));
+builder.Services.AddVersioningExtension();
 builder.Services.AddOptionExtension();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.AddDoctorGroupEndpointExtensions();
+app.AddDoctorGroupEndpointExtensions(app.AddVersionSetExtension());
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
