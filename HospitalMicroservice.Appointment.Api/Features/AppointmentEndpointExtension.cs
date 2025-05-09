@@ -3,6 +3,7 @@ using HospitalMicroservice.Appointment.Api.Features.Appointments.Create;
 using HospitalMicroservice.Appointment.Api.Features.Appointments.Delete;
 using HospitalMicroservice.Appointment.Api.Features.Appointments.GetAll;
 using HospitalMicroservice.Appointment.Api.Features.Appointments.GetAppointmentsByDoctorId;
+using HospitalMicroservice.Appointment.Api.Features.Appointments.GetAppointmentsByPatientId;
 
 namespace HospitalMicroservice.Appointment.Api.Features;
 
@@ -15,6 +16,7 @@ public static class AppointmentEndpointExtension
             .GetAllAppointmentsGroupItemEndpoint()
             .DeleteAppointmentGroupItemEndpoint()
             .GetAppointmentsByDoctorIdGroupItemEndpoint()
+            .GetAppointmentsByPatientIdGroupItemEndpoint()
             .WithApiVersionSet(apiVersionSet);
 
     }
